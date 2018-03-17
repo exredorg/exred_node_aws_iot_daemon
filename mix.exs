@@ -21,7 +21,6 @@ defmodule Exred.Node.AwsIotDaemon.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:exred_library, path: "../exred_library"},
       {:exred_library, git: "git@bitbucket.org:zsolt001/exred_library.git", app: false},
       {:gen_mqtt, "~> 0.4.0"}
       # {:dep_from_hexpm, "~> 0.3.0"},
