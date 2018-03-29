@@ -56,6 +56,7 @@ defmodule Exred.Node.AwsIotDaemon do
   @impl true
   def node_init(state) do
     ssl_options = Application.get_env :exred_node_aws_iot_daemon, :ssl
+    Logger.debug "SSL: #{inspect ssl_options}"
     gen_mqtt_options = [
       host: state.config.host.value,
       port: state.config.port.value,
