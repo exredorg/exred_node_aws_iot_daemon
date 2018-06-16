@@ -9,9 +9,9 @@ defmodule AwsIotClient do
     port: 8883,
     client: "exred 1",
     transport: {:ssl, [
-        keyfile: "/Users/zkeszthelyi/src/exred/certs/ff925dd2f1-private.pem.key",
-        certfile: "/Users/zkeszthelyi/src/exred/certs/ff925dd2f1-certificate.pem.crt",
-        cacertfile: "/Users/zkeszthelyi/src/exred/certs/symantec_ca_root.pem"]}
+        keyfile: "/exred_data/certs/private.pem.key",
+        certfile: "/exred_data/certs/certificate.pem.crt",
+        cacertfile: "/exred_data/certs/symantec_ca_root.pem"]}
   ]
 
   @topics [
@@ -83,7 +83,7 @@ defmodule AwsIotClient do
     |> Enum.map(fn({topic, qos}) -> "  "<>topic end)
     |> Enum.join("\n")
 
-    Logger.debug "SUBSCRIBED to:\n#{list_str}"
+    Logger.info "SUBSCRIBED to:\n#{list_str}"
     {:ok, state}
   end
 
