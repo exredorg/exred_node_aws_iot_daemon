@@ -25,7 +25,8 @@ defmodule Exred.Node.AwsIotDaemon.Mixfile do
     [
       {:exred_library, "~> 0.1.11"},
       {:gen_mqtt, "~> 0.4.0"},
-      {:conform, "~> 2.2"}
+      {:conform, "~> 2.2"},
+      {:ex_doc, "~> 0.18.0", only: :dev, runtime: false}
     ]
   end
   
