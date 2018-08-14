@@ -1,12 +1,16 @@
 defmodule Exred.Node.AwsIotDaemon.Mixfile do
   use Mix.Project
 
+  @description "Maintaines a connection pool to the AWS IOT service in Exred flows."
+  
   def project do
     [
       app: :exred_node_aws_iot_daemon,
       version: "0.1.4",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
+      description: @description,
+      package: package(),
       deps: deps()
     ]
   end
